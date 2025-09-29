@@ -2,18 +2,18 @@ function fetchData(url, callback) {
   console.log("Fetching from:", url);
 
   setTimeout(() => {
-    const networkOk = true; // change to false to simulate network error
-
+    const networkOk = true; 
     if (!networkOk) {
-      callback("Network Error", null); // error case
+      callback("Network Error", null); 
+      
     } else {
       const response = { data: "Sample Data from " + url };
-      callback(null, response); // success case
+      callback(null, response); 
     }
   }, 2000);
 }
 
-// Usage
+
 fetchData("https://example.com/api", (err, response) => {
   if (err) {
     console.log("Fetch failed:", err);
