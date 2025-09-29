@@ -1,19 +1,19 @@
 function readData(callback) {
-  const fileExists = true; // change this to false to simulate missing file
+  const fileExists = true; 
 
   console.log("Reading file...");
 
   setTimeout(() => {
     if (fileExists) {
       const content = "This is file content.";
-      callback(null, content); // no error, return content
+      callback(null, content); 
     } else {
-      callback("Error: File not found!", null); // error case
+      callback("Error: File not found!", null);
     }
   }, 2000);
 }
 
-// Usage
+
 readData((err, data) => {
   if (err) {
     console.log(err);
